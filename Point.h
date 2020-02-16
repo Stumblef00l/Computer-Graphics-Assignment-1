@@ -36,6 +36,11 @@ struct Point
 		return Point(x + p.x, y + p.y);
 	}
 
+	Point operator -(const Point &p)
+	{
+		return Point(x - p.x, y - p.y);
+	}
+
 	bool operator ==(const Point &p)
 	{
 		return ((x == p.x) && (y == p.y));

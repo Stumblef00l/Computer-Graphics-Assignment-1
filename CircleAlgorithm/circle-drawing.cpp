@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 #include <GL/glut.h>
 #include "BresenhamCircle.h"
-#include "Point.h"
+#include "../Point.h"
 
 using namespace std;
 

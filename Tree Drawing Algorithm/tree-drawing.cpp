@@ -1,11 +1,13 @@
 #include <bits/stdc++.h>
 #include <GL/glut.h>
-#include "Point.h"
-#include "BresenhamLine.h"
+#include "TreeDrawing.h"
 
 using namespace std;
 
-Point startingPoint,endPoint; // End Points of the line
+//Global variables
+
+int n;
+vector<pair<int,int>>adj;
 
 // OpenGL display functions
 
@@ -25,8 +27,10 @@ void myDisplay(void)
 	glClear (GL_COLOR_BUFFER_BIT);
 	glColor3f (0.0, 0.0, 0.0);
 	glPointSize(2.0);
-	BresenhamLineDrawing drawer = BresenhamLineDrawing(startingPoint, endPoint);
-	drawer.bresenhamLine();
+
+	TreeDrawing drawer = TreeDrawing(adj);
+	drawer.plotTree();
+
 	glFlush ();
 }
 
@@ -34,26 +38,27 @@ int main(int argc, char **argv)
 {	
 	// Taking the Input Parameters
 
-	cout << "Enter the coordinates of the first end point:\n\n" << endl;
-	cout << "X-coordinate   : "; 
-	cin >> startingPoint.x;
-	cout << "Y-coordinate : "; 
-	cin >> startingPoint.y; 
-	
-	cout << "\nEnter the coordinates of the second end point:\n\n" << endl;
-	cout << "X-coordinate   : "; 
-	cin >> endPoint.x;
-	cout << "Y-coordinate : "; 
-	cin >> endPoint.y;
-
+	cout << "Enter number of nodes: " << endl; 
+	cin >> n;
+    cout << "\nEnter both sons of each node: " << endl;
+	for(int i = 0; i < n; i++) {
+        pair<int,int>p;
+        cin >> p.first >> p.second;
+        if(p.first != -1)
+            p.first = p.first - 1;
+        if(p.second != -1)
+            p.second = p.second - 1;
+        adj.push_back(p);
+    }
 	// Initializing the Window and running the drawing algorithm
 
 	glutInit(&argc,argv);
 	glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
 	glutInitWindowSize (1024, 768);
-	glutCreateWindow ("Bresenham Line Drawing Algorithm");
+	glutCreateWindow ("Tree Drawing Algorithm");
 	glutDisplayFunc(myDisplay);
 	myInit ();
 	glutMainLoop();
 
 }
+
