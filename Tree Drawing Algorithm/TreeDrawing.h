@@ -8,6 +8,9 @@
 
 using namespace std;
 
+/**
+ *  A test class. A more elaborate class description.
+ */
 class TreeDrawing
 {
     private:
@@ -25,8 +28,11 @@ class TreeDrawing
 
     public:
 
-        // Constructor
-
+        
+        /**
+          * Constructor of the TreeDrawing class.
+          * @param adj the adjacency list representation of the tree.
+          */
         TreeDrawing(vector<pair<int,int>> &adj)
         {
             n = adj.size();

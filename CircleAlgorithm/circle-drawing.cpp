@@ -6,12 +6,12 @@
 using namespace std;
 
 // Global Variables
-
 Point center;
 int radius;
 
-// OpenGL display functions
-
+/**
+  * Method to initialize.
+  */
 void myInit (void)
 {
 	glClearColor(1.0, 1.0, 1.0, 0.0);
@@ -22,7 +22,9 @@ void myInit (void)
 	gluOrtho2D(0.0, 1024.0, 0.0, 768.0);
 }
 
-
+/**
+  * Method to display the circle.
+  */
 void myDisplay(void)
 {
 	glClear (GL_COLOR_BUFFER_BIT);

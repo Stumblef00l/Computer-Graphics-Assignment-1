@@ -7,16 +7,20 @@
 
 using namespace std;
 
+/**
+ *  Class to implement Bresenham Circle Algorithm.
+ */
 class BresenhamCircleDrawing
 {
 	private:
 
-		Point center; // Center
-        int radius; // Radius
+		Point center; //!< the center of the cirlce.
+        int radius;   //!< the radius of the cirlce.
 
-		/* Functions defining the actual algorithm */
-
-		//Function to plot a point
+		/**
+          * Method to plot a Point.
+          * @param translatedPoint the Point to be plotted.
+          */
 		void putPixel(Point translatedPoint)
 		{
 			glBegin(GL_POINTS);
@@ -27,33 +31,44 @@ class BresenhamCircleDrawing
 
 	public:
 
-		// Constructor
+		/**
+          * Constructor of the BresenhamCircleDrawing class.
+          * @param c the center of the circle.
+          * @param r the radius of the circle.
+          */
 		BresenhamCircleDrawing(Point c, int r)
 		{
 			center = c;
             radius = r;
 		}
 		
-		// Method to change the starting point
+		/**
+          * Method to change the center of the circle. 
+          * @param c the new center.
+          */
 		void changeCenter(Point c)
 		{
 			center = c;
 		}
 
-		// Method to change the end Point
+		/**
+          * Method to change the radius of the circle.
+          * @param r the new radius.
+          */
 		void changeRadius(int r)
 		{
 			radius = r;
 		}
 
+        /**
+          * Method to implement the Brensenham Circle algorithm.
+          */
 		void bresenhamCircle()
         {
-            /*
-                We assume the centre circle to be shifted to the origin
-                in the bresenhamCirlce function, but shift it back
-                to the original centre before plotting it, inside the
-                putPixel function
-            */
+            /* We assume the centre circle to be shifted to the origin
+            in the bresenhamCirlce function, but shift it back
+            to the original centre before plotting it, inside the
+            putPixel function.*/
 
             // Starting at the topmost point of the circle
             Point currPoint = Point(0,radius);

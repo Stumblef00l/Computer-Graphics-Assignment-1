@@ -5,10 +5,11 @@
 
 using namespace std;
 
-Point startingPoint,endPoint; // End Points of the line
+Point startingPoint,endPoint; //!< the end-points of the line.
 
-// OpenGL display functions
-
+/**
+  * Method to initialize.
+  */
 void myInit (void)
 {
 	glClearColor(1.0, 1.0, 1.0, 0.0);
@@ -19,7 +20,9 @@ void myInit (void)
 	gluOrtho2D(0.0, 1024.0, 0.0, 768.0);
 }
 
-
+/**
+  * Method to display the line.
+  */
 void myDisplay(void)
 {
 	glClear (GL_COLOR_BUFFER_BIT);

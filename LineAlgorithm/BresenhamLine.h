@@ -7,15 +7,19 @@
 
 using namespace std;
 
+/**
+ *  Class to implement Bresenham Line Algorithm.
+ */
 class BresenhamLineDrawing
 {
 	private:
 
-		Point A, B; // Endpoints
+		Point A, B; //!< the end-points of the line.
 
-		/* Functions defining the actual algorithm */
-
-		//Function to plot a point
+		/**
+          * Method to plot a Point.
+          * @param translatedPoint the Point to be plotted.
+          */
 		void putPixel(Point actualPoint)
 		{
 			glBegin(GL_POINTS);
@@ -25,25 +29,38 @@ class BresenhamLineDrawing
 
 	public:
 
-		// Constructor
+		/**
+          * Constructor of the BresenhamLineDrawing class.
+          * @param a the start point of the line.
+          * @param b the end point of the line.
+          */
 		BresenhamLineDrawing(Point a, Point b)
 		{
 			A = a;
 			B = b;
 		}
 		
-		// Method to change the starting point
+		/**
+          * Method to change the start point of the line. 
+          * @param a the new start point.
+          */
 		void changeStart(Point a)
 		{
 			A = a;
 		}
 
-		// Method to change the end Point
+		/**
+          * Method to change the end point of the line. 
+          * @param b the new end point.
+          */
 		void changeEnd(Point b)
 		{
 			B = b;
 		}
 
+		/**
+          * Method to implement the Bresenham Line algorithm. 
+          */
 		void bresenhamLine()
 		{
 			// Handling degenerate lines.

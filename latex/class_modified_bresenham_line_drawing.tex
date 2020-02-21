@@ -1,0 +1,97 @@
+\hypertarget{class_modified_bresenham_line_drawing}{}\doxysection{Modified\+Bresenham\+Line\+Drawing Class Reference}
+\label{class_modified_bresenham_line_drawing}\index{ModifiedBresenhamLineDrawing@{ModifiedBresenhamLineDrawing}}
+
+
+{\ttfamily \#include $<$Modified\+Bresenham\+Line.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_modified_bresenham_line_drawing_a3eaa53ad1794790dcf1d258180d6723a}{Modified\+Bresenham\+Line\+Drawing}} (\mbox{\hyperlink{struct_point}{Point}} a, \mbox{\hyperlink{struct_point}{Point}} b)
+\item 
+void \mbox{\hyperlink{class_modified_bresenham_line_drawing_aab6645d506bc2a9d6722a3ac6bdaa667}{change\+Start}} (\mbox{\hyperlink{struct_point}{Point}} a)
+\item 
+void \mbox{\hyperlink{class_modified_bresenham_line_drawing_a430235f9c327e3b817396d6631f05bbe}{change\+End}} (\mbox{\hyperlink{struct_point}{Point}} b)
+\item 
+bool \mbox{\hyperlink{class_modified_bresenham_line_drawing_ad097026a1b3e24ef30d0ffbdd86ad1dd}{check\+InsideA}} (\mbox{\hyperlink{struct_point}{Point}} x)
+\item 
+bool \mbox{\hyperlink{class_modified_bresenham_line_drawing_a71d1f175c0f9003320dbde5ad4b7d34a}{check\+InsideB}} (\mbox{\hyperlink{struct_point}{Point}} x)
+\item 
+void \mbox{\hyperlink{class_modified_bresenham_line_drawing_adcd0711d0964b42cc0efaf3e2bba3ad7}{modified\+Bresenham\+Line}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A test class. A more elaborate class description. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_modified_bresenham_line_drawing_a3eaa53ad1794790dcf1d258180d6723a}\label{class_modified_bresenham_line_drawing_a3eaa53ad1794790dcf1d258180d6723a}} 
+\index{ModifiedBresenhamLineDrawing@{ModifiedBresenhamLineDrawing}!ModifiedBresenhamLineDrawing@{ModifiedBresenhamLineDrawing}}
+\index{ModifiedBresenhamLineDrawing@{ModifiedBresenhamLineDrawing}!ModifiedBresenhamLineDrawing@{ModifiedBresenhamLineDrawing}}
+\doxysubsubsection{\texorpdfstring{ModifiedBresenhamLineDrawing()}{ModifiedBresenhamLineDrawing()}}
+{\footnotesize\ttfamily Modified\+Bresenham\+Line\+Drawing\+::\+Modified\+Bresenham\+Line\+Drawing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{a,  }\item[{\mbox{\hyperlink{struct_point}{Point}}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of the \mbox{\hyperlink{class_modified_bresenham_line_drawing}{Modified\+Bresenham\+Line\+Drawing}} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_modified_bresenham_line_drawing_a430235f9c327e3b817396d6631f05bbe}\label{class_modified_bresenham_line_drawing_a430235f9c327e3b817396d6631f05bbe}} 
+\index{ModifiedBresenhamLineDrawing@{ModifiedBresenhamLineDrawing}!changeEnd@{changeEnd}}
+\index{changeEnd@{changeEnd}!ModifiedBresenhamLineDrawing@{ModifiedBresenhamLineDrawing}}
+\doxysubsubsection{\texorpdfstring{changeEnd()}{changeEnd()}}
+{\footnotesize\ttfamily void Modified\+Bresenham\+Line\+Drawing\+::change\+End (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method to change the end point of the line. 
+\begin{DoxyParams}{Parameters}
+{\em b} & the new end point. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_modified_bresenham_line_drawing_aab6645d506bc2a9d6722a3ac6bdaa667}\label{class_modified_bresenham_line_drawing_aab6645d506bc2a9d6722a3ac6bdaa667}} 
+\index{ModifiedBresenhamLineDrawing@{ModifiedBresenhamLineDrawing}!changeStart@{changeStart}}
+\index{changeStart@{changeStart}!ModifiedBresenhamLineDrawing@{ModifiedBresenhamLineDrawing}}
+\doxysubsubsection{\texorpdfstring{changeStart()}{changeStart()}}
+{\footnotesize\ttfamily void Modified\+Bresenham\+Line\+Drawing\+::change\+Start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method to change the start point of the line. 
+\begin{DoxyParams}{Parameters}
+{\em a} & the new start point. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_modified_bresenham_line_drawing_ad097026a1b3e24ef30d0ffbdd86ad1dd}\label{class_modified_bresenham_line_drawing_ad097026a1b3e24ef30d0ffbdd86ad1dd}} 
+\index{ModifiedBresenhamLineDrawing@{ModifiedBresenhamLineDrawing}!checkInsideA@{checkInsideA}}
+\index{checkInsideA@{checkInsideA}!ModifiedBresenhamLineDrawing@{ModifiedBresenhamLineDrawing}}
+\doxysubsubsection{\texorpdfstring{checkInsideA()}{checkInsideA()}}
+{\footnotesize\ttfamily bool Modified\+Bresenham\+Line\+Drawing\+::check\+InsideA (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method to check if a point lies inside the circle A. 
+\begin{DoxyParams}{Parameters}
+{\em x} & the point to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the point lies inside the circle A, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modified_bresenham_line_drawing_a71d1f175c0f9003320dbde5ad4b7d34a}\label{class_modified_bresenham_line_drawing_a71d1f175c0f9003320dbde5ad4b7d34a}} 
+\index{ModifiedBresenhamLineDrawing@{ModifiedBresenhamLineDrawing}!checkInsideB@{checkInsideB}}
+\index{checkInsideB@{checkInsideB}!ModifiedBresenhamLineDrawing@{ModifiedBresenhamLineDrawing}}
+\doxysubsubsection{\texorpdfstring{checkInsideB()}{checkInsideB()}}
+{\footnotesize\ttfamily bool Modified\+Bresenham\+Line\+Drawing\+::check\+InsideB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method to check if a point lies inside the circle B. 
+\begin{DoxyParams}{Parameters}
+{\em x} & the point to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the point lies inside the circle B, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_modified_bresenham_line_drawing_adcd0711d0964b42cc0efaf3e2bba3ad7}\label{class_modified_bresenham_line_drawing_adcd0711d0964b42cc0efaf3e2bba3ad7}} 
+\index{ModifiedBresenhamLineDrawing@{ModifiedBresenhamLineDrawing}!modifiedBresenhamLine@{modifiedBresenhamLine}}
+\index{modifiedBresenhamLine@{modifiedBresenhamLine}!ModifiedBresenhamLineDrawing@{ModifiedBresenhamLineDrawing}}
+\doxysubsubsection{\texorpdfstring{modifiedBresenhamLine()}{modifiedBresenhamLine()}}
+{\footnotesize\ttfamily void Modified\+Bresenham\+Line\+Drawing\+::modified\+Bresenham\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method to implement the algorithm. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Tree Drawing Algorithm/Modified\+Bresenham\+Line.\+h\end{DoxyCompactItemize}

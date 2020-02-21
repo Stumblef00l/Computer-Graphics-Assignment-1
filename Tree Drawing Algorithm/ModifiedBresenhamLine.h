@@ -7,6 +7,9 @@
 
 using namespace std;
 
+/**
+ *  Class to implement modified Bresenham Line Drawing Algorithm.
+ */
 class ModifiedBresenhamLineDrawing
 {
 	private:
@@ -17,7 +20,10 @@ class ModifiedBresenhamLineDrawing
 
 		/* Functions defining the actual algorithm */
 
-		//Function to plot a point
+		/**
+          * Method to plot a Point.
+          * @param translatedPoint the Point to be plotted.
+          */
 		void putPixel(Point actualPoint)
 		{
 			glBegin(GL_POINTS);
@@ -27,39 +33,58 @@ class ModifiedBresenhamLineDrawing
 
 	public:
 
-		// Constructor
+		/**
+          * Constructor of the ModifiedBresenhamLineDrawing class.
+          */
 		ModifiedBresenhamLineDrawing(Point a, Point b)
 		{
 			A = a;
 			B = b;
 		}
 		
-		// Method to change the starting point
+		/**
+          * Method to change the start point of the line. 
+          * @param a the new start point.
+          */
 		void changeStart(Point a)
 		{
 			A = a;
 		}
 
-		// Method to change the end Point
+		/**
+          * Method to change the end point of the line. 
+          * @param b the new end point.
+          */
 		void changeEnd(Point b)
 		{
 			B = b;
 		}
 
-        // Method to check if a point is inside circle A
+        /**
+          * Method to check if a point lies inside the circle A. 
+          * @param x the point to be checked.
+          * @return true if the point lies inside the circle A, false otherwise.
+          */
         bool checkInsideA(Point x)
         {
             Point temp = x - A;
             return ((temp.x)*(temp.x) + (temp.y)*(temp.y) <= radiusA*radiusA);
         }
 
-        // Method to check if a point is inside circle B
+        /**
+          * Method to check if a point lies inside the circle B. 
+          * @param x the point to be checked.
+          * @return true if the point lies inside the circle B, false otherwise.
+          */
         bool checkInsideB(Point x)
         {
             Point temp = x - B;
             return ((temp.x)*(temp.x) + (temp.y)*(temp.y) <= radiusB*radiusB);
         }
 
+        /**
+          * Method to implement the algorithm.
+          */
 		void modifiedBresenhamLine()
 		{
 			// Handling degenerate lines.
