@@ -48,6 +48,11 @@ class TreeDrawing
             }
         }
 
+        /**
+          * The setup helper function to assign relative offsets to each node from its children.
+          * @param node the current node.
+          * @param lev the level of the current node.
+          */
         void setup(int node, int lev)
         {
             if(L[node] != -1)
@@ -169,8 +174,12 @@ class TreeDrawing
 
         }
 
-
-        // Method to compute the coordinates
+        /**
+          * Helper method to compute the coordinates / pixels of each node.
+          * @param node the current node.
+          * @param lev the level of the current node
+          * @param xcoord the x coordinate offset of the current node from the root.
+          */
         void findCoordinates(int node, int lev, int xcoord)
         {
             centers[node].y = (700 - lev * 60);
@@ -185,7 +194,9 @@ class TreeDrawing
             if(R[node] != -1)
                 findCoordinates(R[node], lev+1, xcoord + offset[node]);
         }
-
+        /**
+          * Method to plot the TreeDrawing object.
+          */
         void plotTree()
         {
             setup(0,0);
